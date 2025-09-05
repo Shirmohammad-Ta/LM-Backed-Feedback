@@ -1,0 +1,23 @@
+# Model Configuration
+generator_model_name: "microsoft/DialoGPT-medium" 
+critic_model_name: "gpt-4" 
+use_critic_api: true  
+# Training Hyperparameters
+num_iterations: 1000
+batch_size: 32
+learning_rate: 1e-6
+entropy_coeff: 0.01
+gradient_clip: 1.0
+reward_baseline: "moving_average"  
+
+# Data Settings
+dataset_name: "xsum"  
+max_length: 512
+
+# Experiment Tracking
+output_dir: "../results/experiment_1"
+save_interval: 100
+log_interval: 10
+
+
+openai_api_key: "your_api_key_here"  
